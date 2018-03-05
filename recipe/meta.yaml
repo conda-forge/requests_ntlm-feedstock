@@ -1,6 +1,6 @@
 {% set name = "requests_ntlm" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "53ca319f5538e18c38ac79ec4e0d9680bd8ea7ac05532ed8316879296e426641" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "9189c92e8c61ae91402a64b972c4802b2457ce6a799d658256ebf084d5c7eb71" %}
 
 package:
   name: {{ name|lower }}
