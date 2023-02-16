@@ -1,6 +1,6 @@
 {% set name = "requests_ntlm" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "9189c92e8c61ae91402a64b972c4802b2457ce6a799d658256ebf084d5c7eb71" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "33c285f5074e317cbdd338d199afa46a7c01132e5c111d36bd415534e9b916a8" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,10 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -34,7 +34,7 @@ about:
   home: https://github.com/requests/requests-ntlm
   license: ISC
   license_file: LICENSE
-  summary: 'NTLM authentication support for Requests.'
+  summary: NTLM authentication support for Requests.
 
   description: |
     This package allows for HTTP NTLM authentication using the requests library.
